@@ -1,0 +1,27 @@
+version: "3.9"
+
+services:
+
+  cpp:
+    build:
+      context: .
+      dockerfile: Dockerfile.cpp
+    container_name: online_judge_cpp
+
+  c:
+    build:
+      context: .
+      dockerfile: Dockerfile.c
+    container_name: online_judge_c
+
+  python:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    container_name: online_judge_python
+
+  javascript:
+    build:
+      context: .
+      dockerfile: Dockerfile.javascript
+    container_name: online_judge_javascript
