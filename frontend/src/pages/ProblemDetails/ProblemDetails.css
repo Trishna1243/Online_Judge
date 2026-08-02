@@ -1,0 +1,211 @@
+.problem-details-page{
+
+
+    display:grid;
+
+
+    grid-template-columns:35% 65%;
+
+
+    gap:25px;
+
+
+    padding:35px;
+
+
+    height:calc(100vh - 80px);
+
+
+    color:white;
+
+
+    overflow:hidden;
+
+
+}
+
+
+
+
+
+.problem-left{
+
+
+    overflow-y:auto;
+
+
+}
+
+
+
+
+
+.problem-left h1{
+
+
+    font-size:32px;
+
+
+    margin-bottom:15px;
+
+
+}
+
+
+
+
+
+.problem-meta{
+
+
+    display:flex;
+
+
+    gap:10px;
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.difficulty{
+
+
+    padding:6px 14px;
+
+
+    border-radius:20px;
+
+
+    font-size:13px;
+
+
+    font-weight:700;
+
+
+}
+
+
+
+
+
+.easy{
+
+
+    background:#166534;
+
+
+    color:#bbf7d0;
+
+
+}
+
+
+
+
+
+.tag{
+
+
+    background:#1e293b;
+
+
+    padding:6px 12px;
+
+
+    border-radius:20px;
+
+
+    color:#93c5fd;
+
+
+}
+
+
+
+
+
+.description-card{
+
+
+    background:#111827;
+
+
+    border:1px solid #1e293b;
+
+
+    border-radius:18px;
+
+
+    padding:25px;
+
+
+}
+
+
+
+
+
+.description-card h2{
+
+
+    margin-bottom:20px;
+
+
+}
+
+
+
+
+
+.description-card p{
+
+
+    line-height:1.8;
+
+
+    color:#cbd5e1;
+
+
+}
+
+
+
+
+
+.problem-right{
+
+
+    display:flex;
+
+
+    flex-direction:column;
+
+
+    gap:15px;
+
+
+    height:100%;
+
+
+}
+
+
+
+
+
+.problem-loading{
+
+
+    padding:40px;
+
+
+    color:white;
+
+
+}

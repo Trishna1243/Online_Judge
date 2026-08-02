@@ -1,163 +1,312 @@
-const Problem = require("../models/Problem");
+const {
 
-// Create Problem
-const createProblem = async (req, res) => {
+    createProblem,
+    getAllProblems,
+    getProblemById,
+    addFavoriteProblem,
+    removeFavoriteProblem,
+    getFavoriteProblems,
+    updateProblem,
+    deleteProblem
+
+} = require("../services/problem/problemService");
+
+const createProblemController = async (req, res) => {
 
     try {
 
-        const {
-            title,
-            description,
-            difficulty,
-            tags,
-            testCases
-        } = req.body;
-
-        const newProblem = await Problem.create({
-            title,
-            description,
-            difficulty,
-            tags,
-            testCases
-        });
+        const problem = await createProblem(req.body);
 
         res.status(201).json({
+
             success: true,
-            message: "Problem Created Successfully",
-            problem: newProblem
+
+            problem
+
         });
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         res.status(500).json({
+
             success: false,
+
             message: error.message
+
         });
 
     }
 
 };
 
-// Get All Problems
-const getAllProblems = async (req, res) => {
+const getProblemsController = async (req, res) => {
 
     try {
 
-        const problems = await Problem.find();
+        const result = await getAllProblems(req.query);
 
         res.status(200).json({
+
             success: true,
-            problems
+
+            ...result
+
         });
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         res.status(500).json({
+
             success: false,
+
             message: error.message
+
         });
 
     }
 
 };
 
-// Get Problem By ID
-const getProblemById = async (req, res) => {
+const getProblemByIdController = async (req, res) => {
 
     try {
 
-        const problem = await Problem.findById(req.params.id);
+        const problem = await getProblemById(req.params.id);
 
         if (!problem) {
 
             return res.status(404).json({
+
                 success: false,
+
                 message: "Problem Not Found"
+
             });
 
         }
 
         res.status(200).json({
+
             success: true,
+
             problem
+
         });
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         res.status(500).json({
+
             success: false,
+
             message: error.message
+
         });
 
     }
 
 };
 
-// Update Problem
-const updateProblem = async (req, res) => {
+const addFavoriteProblemController = async (req, res) => {
 
     try {
 
-        const updatedProblem = await Problem.findByIdAndUpdate(
-            req.params.id,
-            req.body,
-            {
-                new: true
-            }
+        await addFavoriteProblem(
+
+            req.user.id,
+
+            req.params.id
+
         );
 
-        if (!updatedProblem) {
-
-            return res.status(404).json({
-                success: false,
-                message: "Problem Not Found"
-            });
-
-        }
-
         res.status(200).json({
+
             success: true,
-            message: "Problem Updated Successfully",
-            problem: updatedProblem
+
+            message: "Problem Added To Favorites"
+
         });
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         res.status(500).json({
+
             success: false,
+
             message: error.message
+
         });
 
     }
 
 };
 
-// Delete Problem
-const deleteProblem = async (req, res) => {
+const removeFavoriteProblemController = async (req, res) => {
 
     try {
 
-        const deletedProblem = await Problem.findByIdAndDelete(req.params.id);
+        await removeFavoriteProblem(
 
-        if (!deletedProblem) {
+            req.user.id,
+
+            req.params.id
+
+        );
+
+        res.status(200).json({
+
+            success: true,
+
+            message: "Problem Removed From Favorites"
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: error.message
+
+        });
+
+    }
+
+};
+
+const getFavoriteProblemsController = async (req, res) => {
+
+    try {
+
+        const problems = await getFavoriteProblems(
+
+            req.user.id
+
+        );
+
+        res.status(200).json({
+
+            success: true,
+
+            favoriteProblems: problems
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: error.message
+
+        });
+
+    }
+
+};
+
+const updateProblemController = async (req, res) => {
+
+    try {
+
+        const problem = await updateProblem(
+
+            req.params.id,
+
+            req.body
+
+        );
+
+        if (!problem) {
 
             return res.status(404).json({
+
                 success: false,
+
                 message: "Problem Not Found"
+
             });
 
         }
 
         res.status(200).json({
+
             success: true,
-            message: "Problem Deleted Successfully"
+
+            problem
+
         });
 
-    } catch (error) {
+    }
+
+    catch (error) {
 
         res.status(500).json({
+
             success: false,
+
             message: error.message
+
+        });
+
+    }
+
+};
+
+const deleteProblemController = async (req, res) => {
+
+    try {
+
+        const problem = await deleteProblem(
+
+            req.params.id
+
+        );
+
+        if (!problem) {
+
+            return res.status(404).json({
+
+                success: false,
+
+                message: "Problem Not Found"
+
+            });
+
+        }
+
+        res.status(200).json({
+
+            success: true,
+
+            message: "Problem Deleted Successfully"
+
+        });
+
+    }
+
+    catch (error) {
+
+        res.status(500).json({
+
+            success: false,
+
+            message: error.message
+
         });
 
     }
@@ -165,9 +314,21 @@ const deleteProblem = async (req, res) => {
 };
 
 module.exports = {
-    createProblem,
-    getAllProblems,
-    getProblemById,
-    updateProblem,
-    deleteProblem
+
+    createProblemController,
+
+    getProblemsController,
+
+    getProblemByIdController,
+
+    addFavoriteProblemController,
+
+    removeFavoriteProblemController,
+
+    getFavoriteProblemsController,
+
+    updateProblemController,
+
+    deleteProblemController
+
 };

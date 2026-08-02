@@ -1,96 +1,65 @@
-const Submission = require("../models/Submission");
-const { judgeSubmission } = require("../services/judge/judgeService");
+const {
 
-const submitSolution = async (req, res) => {
+    getUserSubmissions
 
-    try {
+} = require("../services/submission/submissionService");
 
-        const {
-            problemId,
-            language,
-            code
-        } = req.body;
 
-        const result = await judgeSubmission(
-            problemId,
-            language,
-            code
+
+
+
+const getMySubmissionsController = async(req,res)=>{
+
+
+    try{
+
+
+        const submissions = await getUserSubmissions(
+
+            req.user.id
+
         );
 
-        const submission = await Submission.create({
 
-            user: req.user.id,
-
-            problem: problemId,
-
-            language,
-
-            code,
-
-            verdict: result.verdict,
-
-            executionTime: result.executionTime
-
-        });
-
-        res.status(201).json({
-
-            success: true,
-            submission
-
-        });
-
-    } catch (error) {
-
-        res.status(500).json({
-
-            success: false,
-            message: error.message
-
-        });
-
-    }
-
-};
-
-const getMySubmissions = async (req, res) => {
-
-    try {
-
-        const submissions = await Submission.find({
-
-            user: req.user.id
-
-        })
-        .populate("problem", "title difficulty")
-        .sort({
-            submittedAt: -1
-        });
 
         res.status(200).json({
 
-            success: true,
-            count: submissions.length,
+
+            success:true,
+
             submissions
 
-        });
-
-    } catch (error) {
-
-        res.status(500).json({
-
-            success: false,
-            message: error.message
 
         });
+
 
     }
 
+    catch(error){
+
+
+        res.status(500).json({
+
+            success:false,
+
+            message:error.message
+
+        });
+
+
+    }
+
+
 };
 
-module.exports = {
 
-    submitSolution,
-    getMySubmissions
+
+
+
+module.exports={
+
+
+    getMySubmissionsController
+
 
 };

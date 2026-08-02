@@ -1,37 +1,133 @@
-const { runCpp } = require("../runners/cppRunner");
-const { runC } = require("../runners/cRunner");
-const { runPython } = require("../runners/pythonRunner");
-const { runJava } = require("../runners/javaRunner");
-const { runJavaScript } = require("../runners/javascriptRunner");
+const LANGUAGE_CONFIG = require("./languageConfig");
 
-async function executeCode(language, code, input) {
+const {
+    runDocker
+} = require("../docker/dockerService");
 
-    console.log("=================================");
-    console.log("Language Received:", language);
-    console.log("=================================");
 
-    switch (language) {
 
-        case "cpp":
-            return await runCpp(code, input);
+async function executeCode({
 
-        case "c":
-            return await runC(code, input);
+    language,
 
-        case "python":
-            return await runPython(code, input);
+    code,
 
-        case "java":
-            return await runJava(code, input);
+    input
 
-        case "javascript":
-            return await runJavaScript(code, input);
+}) {
 
-        default:
-            throw new Error("Unsupported Language");
+
+    console.log("==============================");
+    console.log("COMPILER SERVICE RECEIVED");
+    console.log("language:", language);
+    console.log("type:", typeof language);
+    console.log("==============================");
+
+
+
+    console.log("AVAILABLE LANGUAGES:");
+
+    console.log(
+        Object.keys(LANGUAGE_CONFIG)
+    );
+
+
+
+
+    const config = LANGUAGE_CONFIG[language];
+
+
+
+    if (!config) {
+
+
+        throw new Error(
+
+            `Unsupported Language Received: ${language}`
+
+        );
+
+
     }
+
+
+
+
+
+    try {
+
+
+
+        const result = await runDocker({
+
+
+            image: config.image,
+
+
+            sourceFileName: config.sourceFileName,
+
+
+            code,
+
+
+            input,
+
+
+            compileCommand: config.compileCommand,
+
+
+            runCommand: config.runCommand
+
+
+
+        });
+
+
+
+
+        return {
+
+
+            output: result.output || "",
+
+
+            executionTime: result.executionTime || 0,
+
+
+            memory: result.memory || 0
+
+
+        };
+
+
+
+    }
+
+
+    catch(error){
+
+
+
+        console.log("DOCKER ERROR");
+
+        console.log(error);
+
+
+
+        throw error;
+
+
+    }
+
+
 }
 
+
+
+
+
 module.exports = {
+
     executeCode
+
 };

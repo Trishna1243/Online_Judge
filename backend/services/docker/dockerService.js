@@ -1,58 +1,104 @@
-const { exec } = require("child_process");
+const {
+    createWorkspace,
+    writeWorkspaceFiles,
+    removeWorkspace
+} = require("./workspaceManager");
 
-function runDocker({
+const {
+    executeInDocker
+} = require("./dockerExecutor");
+
+async function runDocker({
+
     image,
-    submissionPath,
+
+    sourceFileName,
+
+    code,
+
+    input,
+
     compileCommand,
+
     runCommand,
-    timeout = 2000
+
+    timeout
+
 }) {
 
-    return new Promise((resolve, reject) => {
+    const {
 
-        const windowsPath = submissionPath.replace(/\\/g, "/");
+        workspaceId,
 
-        const command =
-`docker run --rm \
---network none \
---memory="256m" \
---cpus="1" \
--v "${windowsPath}:/workspace" \
--w /workspace \
-${image} \
-bash -c "${compileCommand} && ${runCommand}"`;
+        workspacePath
 
-        exec(
-            command,
-            {
-                timeout
-            },
-            (error, stdout, stderr) => {
+    } = createWorkspace();
 
-                if (error) {
+    try {
 
-                    return reject({
+        writeWorkspaceFiles({
 
-                        stdout,
-                        stderr,
-                        error
+            workspacePath,
 
-                    });
+            sourceFileName,
 
-                }
+            code,
 
-                resolve({
+            input
 
-                    stdout,
-                    stderr
+        });
 
-                });
+        const result = await executeInDocker({
 
-            }
+            image,
 
-        );
+            workspacePath,
 
-    });
+            compileCommand,
+
+            runCommand,
+
+            timeout
+
+        });
+
+        return {
+
+            submissionId: workspaceId,
+
+            output: result.stdout,
+
+            stderr: result.stderr,
+
+            executionTime: result.executionTime
+
+        };
+
+    }
+
+    catch (error) {
+
+        throw {
+
+            submissionId: workspaceId,
+
+            stdout: error.stdout || "",
+
+            stderr: error.stderr || "",
+
+            executionTime: error.executionTime || 0,
+
+            error: error.error || error
+
+        };
+
+    }
+
+    finally {
+
+        removeWorkspace(workspacePath);
+
+    }
 
 }
 

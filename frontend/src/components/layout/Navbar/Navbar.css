@@ -1,0 +1,270 @@
+.navbar {
+
+    height: 85px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 35px;
+
+    background:#0b1220;
+
+    border-bottom:1px solid #1e293b;
+
+}
+
+
+
+
+.search-container {
+
+
+    height:48px;
+
+    width:520px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    background:#111827;
+
+    border:1px solid #243047;
+
+    border-radius:12px;
+
+    padding:0 18px;
+
+}
+
+
+
+
+.search-container input {
+
+
+    flex:1;
+
+    background:transparent;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    font-size:16px;
+
+}
+
+
+
+.search-container input::placeholder{
+
+    color:#64748b;
+
+}
+
+
+
+
+.shortcut {
+
+
+    font-size:13px;
+
+    padding:6px 12px;
+
+    border-radius:7px;
+
+    background:#1e293b;
+
+    color:#94a3b8;
+
+}
+
+
+
+
+
+.navbar-right {
+
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+
+
+
+
+.profile {
+
+
+    position:relative;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    cursor:pointer;
+
+    padding:8px 12px;
+
+    border-radius:12px;
+
+}
+
+
+
+
+.profile:hover{
+
+    background:#111827;
+
+}
+
+
+
+
+
+/* smaller avatar */
+
+.avatar {
+    width: 40px !important;
+    height: 40px !important;
+
+    min-width: 40px;
+    min-height: 40px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #2563eb;
+
+    color: white;
+
+    font-size: 20px !important;
+    font-weight: 600;
+
+    line-height: 1;
+}
+
+
+
+
+.profile-info h4 {
+
+
+    margin:0;
+
+
+    color:white;
+
+
+    font-size:16px;
+
+
+    font-weight:600;
+
+
+}
+
+
+
+
+
+.profile > svg{
+
+
+    color:#94a3b8;
+
+}
+
+
+
+
+
+.profile-menu {
+
+
+    position:absolute;
+
+
+    right:0;
+
+
+    top:55px;
+
+
+    width:190px;
+
+
+    background:#111827;
+
+
+    border:1px solid #243047;
+
+
+    border-radius:12px;
+
+
+    padding:8px;
+
+
+    z-index:1000;
+
+
+}
+
+
+
+
+.profile-menu div {
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:10px;
+
+
+    padding:12px;
+
+
+    color:#cbd5e1;
+
+
+    font-size:14px;
+
+
+    border-radius:8px;
+
+
+}
+
+
+
+
+.profile-menu div:hover {
+
+
+    background:#1e293b;
+
+
+}

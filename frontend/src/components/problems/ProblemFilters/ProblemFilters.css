@@ -1,0 +1,57 @@
+.problem-filters{
+
+display:flex;
+
+gap:18px;
+
+}
+
+.problem-filters input{
+
+flex:1;
+
+height:54px;
+
+padding:0 18px;
+
+background:#111827;
+
+border:1px solid #1E293B;
+
+border-radius:14px;
+
+outline:none;
+
+color:white;
+
+font-size:15px;
+
+}
+
+.problem-filters input::placeholder{
+
+color:#64748B;
+
+}
+
+.problem-filters select{
+
+width:210px;
+
+height:54px;
+
+background:#111827;
+
+border:1px solid #1E293B;
+
+border-radius:14px;
+
+padding:0 14px;
+
+color:white;
+
+font-size:15px;
+
+outline:none;
+
+}

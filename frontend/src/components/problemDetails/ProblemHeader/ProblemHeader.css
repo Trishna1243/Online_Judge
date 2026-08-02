@@ -1,0 +1,63 @@
+.problem-header{
+
+    margin-bottom:30px;
+
+}
+
+
+
+.problem-header h1{
+
+    font-size:22px;
+
+    color:white;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.problem-meta{
+
+    display:flex;
+
+    gap:10px;
+
+    align-items:center;
+
+}
+
+
+
+.difficulty{
+
+    background:#16a34a;
+
+    color:white;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+    font-weight:600;
+
+}
+
+
+
+.problem-tag{
+
+    background:#1e293b;
+
+    color:#94a3b8;
+
+    padding:6px 14px;
+
+    border-radius:20px;
+
+    font-size:14px;
+
+}

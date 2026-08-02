@@ -1,0 +1,31 @@
+.ai-page{
+
+padding:40px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:30px;
+
+height:calc(100vh - 100px);
+
+}
+
+
+.ai-header h1{
+
+font-size:48px;
+
+color:white;
+
+}
+
+
+.ai-header p{
+
+color:#94A3B8;
+
+font-size:18px;
+
+}

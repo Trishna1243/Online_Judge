@@ -4,23 +4,25 @@ const router = express.Router();
 
 const protect = require("../middleware/authMiddleware");
 
+
 const {
 
-    submitSolution,
-    getMySubmissions
+    getMySubmissionsController
 
 } = require("../controllers/submissionController");
 
-router.post(
-    "/submit",
-    protect,
-    submitSolution
-);
+
 
 router.get(
-    "/my-submissions",
+
+    "/my",
+
     protect,
-    getMySubmissions
+
+    getMySubmissionsController
+
 );
+
+
 
 module.exports = router;

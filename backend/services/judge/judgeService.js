@@ -1,84 +1,155 @@
 const Problem = require("../../models/Problem");
-const { executeCode } = require("../compiler/compilerService");
 
-async function judgeSubmission(problemId, language, code) {
+
+const {
+    executeCode
+} = require("../compiler/compilerService");
+
+
+
+
+
+const judgeSubmission = async({
+
+    problemId,
+
+    language,
+
+    code
+
+
+})=>{
+
 
     const problem = await Problem.findById(problemId);
 
-    if (!problem) {
-        throw new Error("Problem Not Found");
-    }
 
-    let totalExecutionTime = 0;
 
-    try {
+    if(!problem){
 
-        for (const testCase of problem.testCases) {
 
-            const result = await executeCode(
-                language,
-                code,
-                testCase.input
-            );
+        throw new Error(
 
-            totalExecutionTime += result.executionTime;
+            "Problem not found"
 
-            const expected = testCase.output.trim();
-            const actual = result.output.trim();
+        );
 
-            if (expected !== actual) {
-
-                return {
-                    verdict: "Wrong Answer",
-                    executionTime: totalExecutionTime
-                };
-
-            }
-
-        }
-
-        return {
-            verdict: "Accepted",
-            executionTime: totalExecutionTime
-        };
 
     }
 
-    catch (error) {
 
-        if (error.message.includes("Compilation Error")) {
 
-            return {
-                verdict: "Compilation Error",
-                executionTime: totalExecutionTime
-            };
+
+
+    let verdict = "Accepted";
+
+
+    let runtime = "0";
+
+
+    let memory = "0";
+
+
+
+
+
+    for(const testCase of problem.testCases){
+
+
+
+        const result = await executeCode({
+
+
+            language,
+
+
+            code,
+
+
+            input:testCase.input
+
+
+
+        });
+
+
+
+
+
+        const actualOutput = result.output
+
+        ?
+
+        result.output.trim()
+
+        :
+
+        "";
+
+
+
+
+
+        const expectedOutput = testCase.output.trim();
+
+
+
+
+
+        if(actualOutput !== expectedOutput){
+
+
+
+            verdict = "Wrong Answer";
+
+
+            break;
+
 
         }
 
-        if (error.message.includes("Runtime Error")) {
 
-            return {
-                verdict: "Runtime Error",
-                executionTime: totalExecutionTime
-            };
 
-        }
 
-        if (error.message.includes("Time Limit Exceeded")) {
 
-            return {
-                verdict: "Time Limit Exceeded",
-                executionTime: totalExecutionTime
-            };
+        runtime = result.executionTime || "0";
 
-        }
 
-        throw error;
+        memory = result.memory || "0";
+
+
 
     }
 
-}
+
+
+
+
+    return {
+
+
+        verdict,
+
+
+        runtime,
+
+
+        memory
+
+
+    };
+
+
+};
+
+
+
+
 
 module.exports = {
+
+
     judgeSubmission
+
+
 };
