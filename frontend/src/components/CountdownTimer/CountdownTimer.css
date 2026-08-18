@@ -1,0 +1,29 @@
+.countdown{
+
+
+    margin-top:15px;
+
+    font-size:16px;
+
+    font-weight:bold;
+
+    color:#60a5fa;
+
+
+}
+
+
+
+.countdown strong{
+
+
+    margin-left:10px;
+
+    background:#020617;
+
+    padding:6px 12px;
+
+    border-radius:8px;
+
+
+}

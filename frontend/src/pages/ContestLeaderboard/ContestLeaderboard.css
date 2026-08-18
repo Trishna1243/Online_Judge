@@ -1,0 +1,84 @@
+.leaderboard-page{
+
+    padding:30px;
+
+}
+
+
+
+.leaderboard-card{
+
+
+    background:#111827;
+
+    padding:25px;
+
+    border-radius:12px;
+
+
+}
+
+
+
+
+
+.leaderboard-card h1{
+
+
+    margin-bottom:25px;
+
+
+}
+
+
+
+
+
+table{
+
+
+    width:100%;
+
+    border-collapse:collapse;
+
+
+}
+
+
+
+th{
+
+
+    text-align:left;
+
+    padding:15px;
+
+    background:#020617;
+
+
+}
+
+
+
+
+td{
+
+
+    padding:15px;
+
+    border-bottom:1px solid #374151;
+
+
+}
+
+
+
+
+
+tr:hover{
+
+
+    background:#1f2937;
+
+
+}

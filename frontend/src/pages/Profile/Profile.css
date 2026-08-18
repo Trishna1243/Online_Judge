@@ -1,0 +1,222 @@
+.profile-page{
+
+    padding:10px 15px;
+
+}
+
+
+
+
+
+.profile-header{
+
+    margin-bottom:20px;
+
+}
+
+
+
+
+
+.profile-header h1{
+
+    color:white;
+
+    font-size:26px;
+
+    margin-bottom:5px;
+
+}
+
+
+
+
+
+.profile-header p{
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+}
+
+
+
+
+
+
+.profile-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+.profile-card{
+
+    background:#111827;
+
+    border:1px solid #1E293B;
+
+    border-radius:12px;
+
+    padding:15px;
+
+}
+
+
+
+
+
+.profile-card span{
+
+    color:#94A3B8;
+
+    font-size:12px;
+
+}
+
+
+
+
+
+.profile-card h2{
+
+    color:white;
+
+    font-size:22px;
+
+    margin-top:6px;
+
+}
+
+
+
+
+
+
+
+.solved-section{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+.solve-card{
+
+    background:#111827;
+
+    border:1px solid #1E293B;
+
+    border-radius:12px;
+
+    padding:15px;
+
+}
+
+
+
+
+
+.solve-card h3{
+
+    color:white;
+
+    font-size:15px;
+
+}
+
+
+
+.solve-card p{
+
+    color:#94A3B8;
+
+    font-size:20px;
+
+    margin-top:8px;
+
+}
+
+
+
+
+
+.badges-section{
+
+    background:#111827;
+
+    border:1px solid #1E293B;
+
+    border-radius:12px;
+
+    padding:18px;
+
+}
+
+
+
+
+
+.badges-section h2{
+
+    color:white;
+
+    font-size:18px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+.badges-container{
+
+    display:flex;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+
+
+
+
+.badge-card{
+
+    background:#0F172A;
+
+    border:1px solid #334155;
+
+    border-radius:10px;
+
+    padding:10px 15px;
+
+    color:#E2E8F0;
+
+    font-size:13px;
+
+}

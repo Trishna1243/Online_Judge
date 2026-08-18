@@ -1,0 +1,194 @@
+.challenge-card{
+
+    position:relative;
+
+    overflow:hidden;
+
+    height:220px;
+
+    border-radius:24px;
+
+    padding:34px 36px;
+
+    background:linear-gradient(
+        135deg,
+        #2563EB 0%,
+        #3B82F6 55%,
+        #1D4ED8 100%
+    );
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    box-shadow:0 18px 40px rgba(37,99,235,.18);
+
+}
+
+.challenge-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:280px;
+
+    height:280px;
+
+    border-radius:50%;
+
+    right:-120px;
+
+    top:-120px;
+
+    background:rgba(255,255,255,.08);
+
+}
+
+.challenge-content{
+
+    position:relative;
+
+    z-index:2;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+    max-width:560px;
+
+}
+
+.challenge-label{
+
+    color:rgba(255,255,255,.75);
+
+    font-size:12px;
+
+    letter-spacing:2px;
+
+    font-weight:700;
+
+}
+
+.challenge-content h2{
+
+    margin:0;
+
+    color:white;
+
+    font-size:42px;
+
+    font-weight:800;
+
+    line-height:1.1;
+
+}
+
+.challenge-content p{
+
+    margin:0;
+
+    color:rgba(255,255,255,.92);
+
+    font-size:16px;
+
+    line-height:1.6;
+
+    max-width:460px;
+
+}
+
+.challenge-footer{
+
+    margin-top:12px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:18px;
+
+    flex-wrap:wrap;
+
+}
+
+.challenge-footer button{
+
+    height:48px;
+
+    padding:0 22px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:white;
+
+    color:#2563EB;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.challenge-footer button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+.challenge-stats{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.challenge-stats span{
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.18);
+
+    backdrop-filter:blur(10px);
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+.rocket{
+
+    position:absolute;
+
+    right:48px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    color:white;
+
+    opacity:.12;
+
+    z-index:1;
+
+}

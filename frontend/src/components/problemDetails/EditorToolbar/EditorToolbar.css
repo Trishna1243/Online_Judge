@@ -1,0 +1,253 @@
+.editor-toolbar{
+
+
+    height:52px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:12px;
+
+
+    padding:0 14px;
+
+
+    background:#111827;
+
+
+    border:1px solid #1E293B;
+
+
+    border-radius:12px;
+
+
+}
+
+
+
+
+.editor-toolbar select{
+
+
+    width:80px;
+
+
+    height:30px;
+
+
+    background:#0F172A;
+
+
+    color:white;
+
+
+    border:1px solid #334155;
+
+
+    border-radius:7px;
+
+
+    font-size:12px;
+
+
+    padding:0 6px;
+
+
+    outline:none;
+
+
+}
+
+
+
+
+
+
+.toolbar-actions{
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    gap:5px;
+
+
+}
+
+
+
+
+
+.icon-btn{
+
+
+    width:30px;
+
+
+    height:30px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    background:transparent;
+
+
+    border:none;
+
+
+    color:#CBD5E1;
+
+
+    cursor:pointer;
+
+
+    border-radius:7px;
+
+
+}
+
+
+
+
+
+.icon-btn:hover{
+
+
+    background:#1E293B;
+
+
+    color:white;
+
+
+}
+
+
+
+
+
+
+
+
+.toolbar-right{
+
+
+    margin-left:auto;
+
+
+    display:flex;
+
+
+    gap:8px;
+
+
+}
+
+
+
+
+
+.run-btn,
+.submit-btn{
+
+
+    height:32px;
+
+
+    padding:0 14px;
+
+
+    display:flex;
+
+
+    align-items:center;
+
+
+    justify-content:center;
+
+
+    gap:6px;
+
+
+    border:none;
+
+
+    border-radius:8px;
+
+
+    color:white;
+
+
+    font-size:12px;
+
+
+    font-weight:600;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+
+.run-btn{
+
+
+    background:#374151;
+
+
+}
+
+
+
+
+
+.run-btn:hover{
+
+
+    background:#4B5563;
+
+
+}
+
+
+
+
+
+
+.submit-btn{
+
+
+    background:#2563EB;
+
+
+}
+
+
+
+
+
+.submit-btn:hover{
+
+
+    background:#1D4ED8;
+
+
+}

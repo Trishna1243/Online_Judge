@@ -1,0 +1,71 @@
+.contest-management{
+
+background:#111827;
+
+padding:20px;
+
+border-radius:12px;
+
+margin-top:25px;
+
+}
+
+
+
+.contest-management input,
+.contest-management textarea,
+.contest-management select{
+
+
+width:100%;
+
+padding:12px;
+
+margin-bottom:12px;
+
+background:#020617;
+
+color:white;
+
+border:1px solid #374151;
+
+border-radius:8px;
+
+
+}
+
+
+
+.contest-management button{
+
+
+background:#2563eb;
+
+color:white;
+
+border:none;
+
+padding:12px 20px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+
+}
+
+
+
+.contest-row{
+
+display:flex;
+
+justify-content:space-between;
+
+padding:15px 0;
+
+border-bottom:1px solid #374151;
+
+color:white;
+
+}

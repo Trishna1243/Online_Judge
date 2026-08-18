@@ -1,0 +1,82 @@
+.recommend-card{
+    background:#111827;
+    border:1px solid #1E293B;
+    border-radius:24px;
+    padding:32px;
+    transition:.25s;
+}
+
+.recommend-card:hover{
+    border-color:#2563EB;
+    box-shadow:0 15px 35px rgba(37,99,235,.12);
+}
+
+.recommend-title{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:24px;
+}
+
+.recommend-title h2{
+    color:white;
+    font-size:32px;
+    font-weight:700;
+}
+
+.view-link{
+    color:#3B82F6;
+    font-weight:600;
+    cursor:pointer;
+}
+
+.problem-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 0;
+    border-top:1px solid #1E293B;
+    transition:.25s;
+    cursor:pointer;
+}
+
+.problem-row:first-of-type{
+    border-top:none;
+}
+
+.problem-row:hover{
+    transform:translateX(6px);
+}
+
+.problem-info h3{
+    color:white;
+    font-size:19px;
+    margin-bottom:8px;
+}
+
+.problem-info p{
+    color:#94A3B8;
+    font-size:15px;
+}
+
+.diff{
+    padding:8px 18px;
+    border-radius:999px;
+    font-size:13px;
+    font-weight:700;
+}
+
+.easy{
+    background:#14532D;
+    color:#4ADE80;
+}
+
+.medium{
+    background:#78350F;
+    color:#FBBF24;
+}
+
+.hard{
+    background:#450A0A;
+    color:#F87171;
+}

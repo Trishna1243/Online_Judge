@@ -1,0 +1,205 @@
+.practice-page{
+
+    padding:10px 15px;
+
+}
+
+
+
+.practice-header{
+
+    margin-bottom:20px;
+
+}
+
+
+
+.practice-header h1{
+
+    color:white;
+
+    font-size:26px;
+
+    margin-bottom:5px;
+
+}
+
+
+
+.practice-header p{
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+}
+
+
+
+
+
+.practice-stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:12px;
+
+    margin-bottom:25px;
+
+}
+
+
+
+
+
+.practice-card{
+
+    background:#111827;
+
+    border:1px solid #1E293B;
+
+    border-radius:12px;
+
+    padding:18px;
+
+}
+
+
+
+.practice-card span{
+
+    color:#94A3B8;
+
+    font-size:12px;
+
+}
+
+
+
+.practice-card h2{
+
+    color:white;
+
+    font-size:22px;
+
+    margin-top:8px;
+
+}
+
+
+
+
+
+
+
+.section-title{
+
+    color:white;
+
+    font-size:17px;
+
+    margin-bottom:12px;
+
+}
+
+
+
+
+
+.recommended-container{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+
+
+
+
+.recommended-card{
+
+    background:#111827;
+
+    border:1px solid #1E293B;
+
+    border-radius:12px;
+
+    padding:14px 18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.recommended-card h3{
+
+    color:white;
+
+    font-size:14px;
+
+    margin-bottom:4px;
+
+}
+
+
+
+.recommended-card p{
+
+    color:#94A3B8;
+
+    font-size:12px;
+
+}
+
+
+
+.recommended-card span{
+
+    padding:5px 12px;
+
+    border-radius:15px;
+
+    font-size:11px;
+
+}
+
+
+
+.easy{
+
+    background:#166534;
+
+    color:#bbf7d0;
+
+}
+
+
+
+.medium{
+
+    background:#854d0e;
+
+    color:#fef08a;
+
+}
+
+
+
+.hard{
+
+    background:#991b1b;
+
+    color:#fecaca;
+
+}

@@ -1,0 +1,224 @@
+.dashboard-page {
+
+    padding:5px 10px;
+
+}
+
+
+/* HEADER */
+
+.dashboard-header {
+
+    margin-bottom:16px;
+
+}
+
+
+.dashboard-header h1 {
+
+    color:white;
+
+    font-size:26px;
+
+    font-weight:700;
+
+    margin:0 0 5px;
+
+}
+
+
+.dashboard-header p {
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+    margin:0;
+
+}
+
+
+
+/* TOP STAT CARDS */
+
+.stats-container {
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:12px;
+
+    margin-top:18px;
+
+    margin-bottom:24px;
+
+}
+
+
+
+.stat-card {
+
+    height:75px;
+
+    background:#111827;
+
+    border:1px solid #1E293B;
+
+    border-radius:12px;
+
+    padding:14px;
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+.icon-box {
+
+    width:34px;
+
+    height:34px;
+
+    border-radius:9px;
+
+    background:#2563EB;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.icon-box svg {
+
+    width:18px;
+
+    height:18px;
+
+}
+
+
+
+.stat-card span {
+
+    color:#94A3B8;
+
+    font-size:12px;
+
+}
+
+
+
+.stat-card h2 {
+
+    color:white;
+
+    font-size:22px;
+
+    margin:4px 0 0;
+
+}
+
+
+
+/* RECENT SUBMISSIONS */
+
+.section-title {
+
+    color:white;
+
+    font-size:16px;
+
+    margin-bottom:10px;
+
+}
+
+
+
+.submission-card {
+
+    background:#111827;
+
+    border:1px solid #1E293B;
+
+    border-radius:12px;
+
+    padding:10px 16px;
+
+    margin-bottom:8px;
+
+    height:42px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.submission-card h3 {
+
+    color:white;
+
+    font-size:13px;
+
+    margin:0 0 2px;
+
+}
+
+
+
+.submission-card p {
+
+    color:#94A3B8;
+
+    font-size:11px;
+
+    margin:0;
+
+}
+
+
+
+.accepted {
+
+    background:#166534;
+
+    color:#86efac;
+
+    padding:4px 12px;
+
+    border-radius:15px;
+
+    font-size:11px;
+
+}
+
+
+
+.failed {
+
+    background:#991B1B;
+
+    color:#fecaca;
+
+    padding:4px 12px;
+
+    border-radius:15px;
+
+    font-size:11px;
+
+}

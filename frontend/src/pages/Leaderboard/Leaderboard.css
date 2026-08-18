@@ -1,0 +1,167 @@
+.leaderboard-page{
+
+    padding:10px 15px;
+
+}
+
+
+
+.leaderboard-header{
+
+    margin-bottom:18px;
+
+}
+
+
+
+.leaderboard-header h1{
+
+    color:white;
+
+    font-size:26px;
+
+    margin:0 0 5px;
+
+}
+
+
+
+.leaderboard-header p{
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+}
+
+
+
+
+
+.leaderboard-card{
+
+    background:#111827;
+
+    border:1px solid #1E293B;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    overflow:hidden;
+
+}
+
+
+
+
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+
+
+
+
+thead{
+
+    background:#0F172A;
+
+}
+
+
+
+th{
+
+    text-align:left;
+
+    padding:12px 15px;
+
+    color:#94A3B8;
+
+    font-size:12px;
+
+    font-weight:600;
+
+}
+
+
+
+
+
+td{
+
+    padding:12px 15px;
+
+    color:#E2E8F0;
+
+    font-size:13px;
+
+    border-top:1px solid #1E293B;
+
+}
+
+
+
+
+
+tbody tr{
+
+    transition:.2s;
+
+}
+
+
+
+tbody tr:hover{
+
+    background:#172033;
+
+}
+
+
+
+
+
+td strong{
+
+    color:white;
+
+}
+
+
+
+
+
+.rank{
+
+    font-size:18px;
+
+}
+
+
+
+
+
+.points{
+
+    color:#60A5FA;
+
+    font-weight:700;
+
+}
+
+
+
+
+
+.solved{
+
+    color:#94A3B8;
+
+}

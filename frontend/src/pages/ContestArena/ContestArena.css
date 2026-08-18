@@ -1,0 +1,317 @@
+.arena-page{
+
+    padding:30px;
+
+}
+
+
+
+
+
+.arena-header{
+
+    background:#111827;
+
+    padding:20px;
+
+    border-radius:12px;
+
+    margin-bottom:20px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+
+
+
+.leaderboard-btn{
+
+    padding:12px 25px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+}
+
+
+
+
+
+.leaderboard-btn:hover{
+
+    opacity:0.85;
+
+}
+
+
+
+
+
+
+
+.arena-layout{
+
+    display:grid;
+
+    grid-template-columns:180px 1fr 1fr;
+
+    gap:20px;
+
+    align-items:start;
+
+}
+
+
+
+
+
+
+
+.problem-list,
+.problem-details,
+.editor-section{
+
+    background:#111827;
+
+    padding:20px;
+
+    border-radius:12px;
+
+}
+
+
+
+
+
+
+
+.problem-btn{
+
+    width:100%;
+
+    padding:12px;
+
+    margin-bottom:12px;
+
+    background:#1f2937;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    text-align:left;
+
+}
+
+
+
+
+
+.problem-btn:hover{
+
+    background:#374151;
+
+}
+
+
+
+
+
+
+.problem-btn.active{
+
+    background:#2563eb;
+
+}
+
+
+
+
+
+
+
+.problem-details{
+
+    max-height:750px;
+
+    overflow-y:auto;
+
+}
+
+
+
+
+
+
+
+.example{
+
+    background:#020617;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    margin-bottom:15px;
+
+}
+
+
+
+
+
+
+
+pre{
+
+    white-space:pre-wrap;
+
+    word-wrap:break-word;
+
+}
+
+
+
+
+
+
+
+.editor-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+
+
+
+
+
+
+.editor-section select{
+
+    padding:10px;
+
+    background:#020617;
+
+    color:white;
+
+    border-radius:8px;
+
+}
+
+
+
+
+
+
+
+.editor-section textarea{
+
+    width:100%;
+
+    min-height:180px;
+
+    background:#020617;
+
+    color:white;
+
+    padding:15px;
+
+    border-radius:10px;
+
+    border:1px solid #374151;
+
+    font-family:monospace;
+
+}
+
+
+
+
+
+
+
+.editor-section button{
+
+    padding:12px 20px;
+
+    background:#2563eb;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+}
+
+
+
+
+
+
+
+.output-box{
+
+    background:#020617;
+
+    padding:15px;
+
+    min-height:100px;
+
+    border-radius:10px;
+
+}
+
+.submission-history{
+
+    margin-top:20px;
+
+    background:#111827;
+
+    padding:20px;
+
+    border-radius:12px;
+
+}
+
+
+
+.submission-card{
+
+    background:#020617;
+
+    padding:12px;
+
+    margin-top:10px;
+
+    border-radius:8px;
+
+}

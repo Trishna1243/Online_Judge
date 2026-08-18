@@ -1,0 +1,99 @@
+.navbar{
+
+    height:60px;
+
+    background:#0B1120;
+
+    border-bottom:1px solid #1E293B;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:space-between;
+
+    padding:0 25px;
+
+}
+
+
+
+
+
+.search-bar{
+
+    width:420px;
+
+    height:38px;
+
+    background:#111827;
+
+    border:1px solid #1E293B;
+
+    border-radius:10px;
+
+    padding:0 16px;
+
+    color:white;
+
+    font-size:14px;
+
+    outline:none;
+
+}
+
+
+
+.search-bar::placeholder{
+
+    color:#64748B;
+
+}
+
+
+
+
+
+.navbar-user{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:10px;
+
+    color:white;
+
+    font-weight:600;
+
+    font-size:14px;
+
+}
+
+
+
+
+
+.user-avatar{
+
+    width:36px;
+
+    height:36px;
+
+    border-radius:50%;
+
+    background:#2563EB;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:white;
+
+    font-size:16px;
+
+    font-weight:700;
+
+}

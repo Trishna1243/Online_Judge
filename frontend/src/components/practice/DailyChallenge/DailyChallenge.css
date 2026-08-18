@@ -1,0 +1,72 @@
+.challenge-card{
+
+background:#2563EB;
+
+border-radius:20px;
+
+padding:30px;
+
+color:white;
+
+}
+
+
+.challenge-card h1{
+
+font-size:36px;
+
+margin:15px 0;
+
+}
+
+
+.challenge-card p{
+
+color:#DBEAFE;
+
+}
+
+
+.challenge-details{
+
+display:flex;
+
+gap:12px;
+
+margin:20px 0;
+
+flex-wrap:wrap;
+
+}
+
+
+.challenge-details span{
+
+background:#1D4ED8;
+
+padding:8px 15px;
+
+border-radius:20px;
+
+font-size:14px;
+
+}
+
+
+.challenge-card button{
+
+background:white;
+
+color:#2563EB;
+
+border:none;
+
+padding:12px 25px;
+
+border-radius:10px;
+
+font-weight:700;
+
+cursor:pointer;
+
+}

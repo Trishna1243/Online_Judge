@@ -1,0 +1,171 @@
+.contest-page{
+
+    padding:10px 15px;
+
+}
+
+
+
+.contest-header{
+
+    margin-bottom:20px;
+
+}
+
+
+
+.contest-header h1{
+
+    color:white;
+
+    font-size:26px;
+
+    margin-bottom:5px;
+
+}
+
+
+
+.contest-header p{
+
+    color:#94A3B8;
+
+    font-size:13px;
+
+}
+
+
+
+
+
+.contest-container{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:12px;
+
+}
+
+
+
+
+
+.contest-card{
+
+    width:100%;
+
+    box-sizing:border-box;
+
+    background:#111827;
+
+    border:1px solid #1E293B;
+
+    border-radius:12px;
+
+    padding:16px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+
+
+.contest-info h2{
+
+    color:white;
+
+    font-size:16px;
+
+    margin-bottom:8px;
+
+}
+
+
+
+.contest-info p{
+
+    color:#94A3B8;
+
+    font-size:12px;
+
+    margin:3px 0;
+
+}
+
+
+
+
+
+.contest-action{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:12px;
+
+}
+
+
+
+
+
+.contest-action span{
+
+    padding:5px 12px;
+
+    border-radius:15px;
+
+    font-size:11px;
+
+}
+
+
+
+.live{
+
+    background:#166534;
+
+    color:#bbf7d0;
+
+}
+
+
+
+.upcoming{
+
+    background:#1E3A8A;
+
+    color:#bfdbfe;
+
+}
+
+
+
+
+
+.contest-action button{
+
+    background:#2563EB;
+
+    color:white;
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:7px 16px;
+
+    font-size:12px;
+
+}

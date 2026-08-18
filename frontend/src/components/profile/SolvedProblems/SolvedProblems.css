@@ -1,0 +1,37 @@
+.solved-card{
+
+background:#111827;
+
+border:1px solid #1E293B;
+
+border-radius:18px;
+
+padding:25px;
+
+}
+
+
+.problem-list{
+
+display:flex;
+
+gap:15px;
+
+margin-top:20px;
+
+flex-wrap:wrap;
+
+}
+
+
+.problem-list span{
+
+background:#172033;
+
+padding:12px 18px;
+
+border-radius:10px;
+
+color:#CBD5E1;
+
+}

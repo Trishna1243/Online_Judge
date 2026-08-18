@@ -1,0 +1,97 @@
+.problem-filters{
+
+
+    display:flex;
+
+    gap:12px;
+
+    margin-bottom:18px;
+
+
+}
+
+
+
+
+
+.problem-filters input,
+.problem-filters select{
+
+
+    height:38px;
+
+
+    background:#111827;
+
+
+    border:1px solid #1E293B;
+
+
+    border-radius:10px;
+
+
+    color:white;
+
+
+    padding:0 14px;
+
+
+    font-size:13px;
+
+
+    outline:none;
+
+
+}
+
+
+
+
+
+.problem-filters input{
+
+
+    width:320px;
+
+
+}
+
+
+
+
+
+.problem-filters select{
+
+
+    width:160px;
+
+
+    cursor:pointer;
+
+
+}
+
+
+
+
+
+.problem-filters input::placeholder{
+
+
+    color:#64748B;
+
+
+}
+
+
+
+
+
+.problem-filters input:focus,
+.problem-filters select:focus{
+
+
+    border-color:#2563EB;
+
+
+}

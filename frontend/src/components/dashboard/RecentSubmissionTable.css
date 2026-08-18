@@ -1,0 +1,131 @@
+.submission-card{
+    background:#111827;
+    border:1px solid #1E293B;
+    border-radius:24px;
+    padding:32px;
+    transition:.25s;
+}
+
+.submission-card:hover{
+    border-color:#2563EB;
+    box-shadow:0 15px 35px rgba(37,99,235,.12);
+}
+
+.submission-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:28px;
+}
+
+.submission-header h2{
+    color:white;
+    font-size:32px;
+    font-weight:700;
+}
+
+.view-all{
+    color:#3B82F6;
+    font-size:17px;
+    font-weight:600;
+    cursor:pointer;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead th{
+
+    color:#64748B;
+
+    text-align:left;
+
+    font-size:15px;
+
+    font-weight:700;
+
+    padding-bottom:18px;
+
+}
+
+tbody tr{
+
+    transition:.25s;
+
+    cursor:pointer;
+
+}
+
+tbody tr:hover{
+
+    background:#172554;
+
+}
+
+tbody td{
+
+    padding:22px 0;
+
+    color:white;
+
+    font-size:18px;
+
+    border-top:1px solid #1E293B;
+
+}
+
+.problem-name{
+
+    font-weight:600;
+
+}
+
+.lang{
+
+    color:#CBD5E1;
+
+}
+
+.badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:8px 16px;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    font-weight:700;
+
+}
+
+.accepted{
+
+background:#14532D;
+
+color:#4ADE80;
+
+}
+
+.wrong{
+
+background:#450A0A;
+
+color:#F87171;
+
+}
+
+.tle{
+
+background:#78350F;
+
+color:#FBBF24;
+
+}
